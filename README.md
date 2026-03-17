@@ -11,7 +11,7 @@ covering both successful and failure scenarios.
 The solution consists of:
 - A small Neptune DXP application for searching items
 - A REST API implemented using Neptune API Designer and Server Scripts
-- End-to-end automated tests written with Playwright(TypeScript)
+- End-to-end automated tests written with Playwright (TypeScript)
 
 The focus of the implementation is not UI complexity, but reliable end-to-end validation of
 application behavior.
@@ -97,7 +97,7 @@ end-to-end testing.
 ---
 
 ## Project Structure
-
+````
 playwright/
   tests/
     search-success.spec.ts
@@ -107,7 +107,7 @@ playwright/
   .auth/
 playwright.config.ts
 package.json
-
+````
 ---
 
 ## Requirements
