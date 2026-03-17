@@ -75,6 +75,14 @@ end-to-end testing.
 
 ---
 
+## Requirements
+
+- Node.js (>= 18)
+- npm
+- Neptune DXP Open Edition running locally
+
+---
+
 ## How to Run
 
 ### 1. Start Neptune DXP
@@ -116,4 +124,11 @@ npx playwright test
 
 ```bash
 npx playwright show-report
+```
+
+----
+
+## Notes
+
+- The `.env` file and Playwright authentication state (`.auth/state.json`) are not committed for security reasons.
 
