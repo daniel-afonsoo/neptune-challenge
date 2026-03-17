@@ -11,7 +11,7 @@ covering both successful and failure scenarios.
 The solution consists of:
 - A small Neptune DXP application for searching items
 - A REST API implemented using Neptune API Designer and Server Scripts
-- End-to-end automated tests written with Playwright
+- End-to-end automated tests written with Playwright(TypeScript)
 
 The focus of the implementation is not UI complexity, but reliable end-to-end validation of
 application behavior.
@@ -96,6 +96,20 @@ end-to-end testing.
 
 ---
 
+## Project Structure
+
+playwright/
+  tests/
+    search-success.spec.ts
+    search-no-results.spec.ts
+    search-api-error.spec.ts
+    auth.setup.ts
+  .auth/
+playwright.config.ts
+package.json
+
+---
+
 ## Requirements
 
 - Node.js (>= 18)
@@ -123,11 +137,10 @@ npm install
 
 ### 3. Configure environment variables
 
-Create a `.env` file in the root of the project:
+Copy the `.env.example` file and create a `.env` file:
 
-```env
-NEPTUNE_USER=your-username
-NEPTUNE_PASSWORD=your-password
+```bash
+cp .env.example .env
 ```
 ---
 
