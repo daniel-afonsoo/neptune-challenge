@@ -131,4 +131,4 @@ npx playwright show-report
 ## Notes
 
 - The `.env` file and Playwright authentication state (`.auth/state.json`) are not committed for security reasons.
-
+This ensures sensitive data is not exposed and follows best practices for test automation projects.
