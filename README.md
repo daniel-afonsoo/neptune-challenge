@@ -62,6 +62,27 @@ These scenarios together validate the main user flow, edge cases, and error hand
 
 ---
 
+## Authentication Strategy
+
+Authentication is handled using a Playwright setup project (`auth.setup.ts`):
+
+- Login is executed once before all tests
+- The authenticated session is stored using `storageState`
+- All tests reuse the same authenticated session
+
+This approach improves performance and ensures consistent test execution.
+
+---
+
+## Test Design Decisions
+
+- Playwright recommended locators are used (`getByRole`, `getByText`)
+- Regular expressions are used to reduce test fragility
+- Tests follow a clear Arrange / Act / Assert structure
+- API failure is triggered deterministically using the input `error`
+
+---
+
 ## Deterministic API Failure Trigger
 
 For testing purposes, the API includes a deterministic failure trigger.
@@ -126,7 +147,24 @@ npx playwright test
 npx playwright show-report
 ```
 
-----
+---
+
+## Test Evidence
+
+The Playwright HTML report provides:
+
+- Step-by-step execution traces
+- Screenshots on failure
+- Video recordings of test runs
+
+---
+
+## Limitations
+
+- Requires a locally running Neptune DXP Open Edition instance
+- No CI/CD pipeline is included
+
+---
 
 ## Notes
 
