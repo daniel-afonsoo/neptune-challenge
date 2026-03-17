@@ -74,3 +74,46 @@ This approach ensures that API failure scenarios are reproducible and suitable f
 end-to-end testing.
 
 ---
+
+## How to Run
+
+### 1. Start Neptune DXP
+
+Ensure Neptune DXP Open Edition is running locally:
+
+http://localhost:8080
+
+---
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+---
+
+### 3. Configure environment variables
+
+Create a `.env` file in the root of the project:
+
+```env
+NEPTUNE_USER=your-username
+NEPTUNE_PASSWORD=your-password
+```
+---
+
+---
+
+### 4. Run tests
+
+```bash
+npx playwright test
+````
+
+---
+
+### 5. Open HTML report
+
+```bash
+npx playwright show-report
+
