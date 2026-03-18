@@ -107,6 +107,7 @@ playwright/
   .auth/
 playwright.config.ts
 package.json
+.env.example.txt
 ````
 ---
 
@@ -150,7 +151,7 @@ cp .env.example .env
 
 ```bash
 npx playwright test
-````
+```
 
 ---
 
